@@ -27,4 +27,8 @@ public class Hero {
     public String getHeroDefence() {
         return heroDefence;
     }
+    public Hero(){
+
+    }
 }
+

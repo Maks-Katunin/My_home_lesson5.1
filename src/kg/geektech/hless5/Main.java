@@ -18,39 +18,30 @@ public class Main {
 
         System.out.println("------------------------------------");
 
-        createHeroes();
+        for (int i = 0; i < createHeroes().length; i++) {
+
+            System.out.println(createHeroes()[i].getHeroHealth() + " " + createHeroes()[i].getHeroDamage() + " " + createHeroes()[i].getHeroDefence());
+
+        }
+
     }
 
-    public static Hero createHeroes() {
+    public static Hero[] createHeroes() {
 
         Hero hero1 = new Hero(250, 15);
 
-        System.out.println("Hero1 helth " + hero1.getHeroHealth() + ":" +
-                "  damage " + "[" + hero1.getHeroDamage() + "]");
-        System.out.println(" ");
-
         Hero hero2 = new Hero(260, 20, "Magic");
-
-        System.out.println("Hero2 helth " + hero2.getHeroHealth() + ":" +
-                "  damage " + "[" + hero2.getHeroDamage() + "]" +
-                "  defence is " + hero2.getHeroDefence() + ".");
-        System.out.println(" ");
 
         Hero hero3 = new Hero(270, 25, "Medic");
 
-        System.out.println("Hero3 helth " + hero3.getHeroHealth() + ":" +
-                "  damage " + "[" + hero3.getHeroDamage() + "]" +
-                "  defence is " + hero3.getHeroDefence() + ".");
 
 
-        System.out.println("------------------------------------");
 
+        Hero[] heroesMassive = {hero1, hero2, hero3};
 
-        int[][] createHeroes = {{hero1.getHeroHealth(), hero1.getHeroDamage()},
-                {hero2.getHeroHealth(), hero2.getHeroDamage(),},
-                {hero3.getHeroHealth(), hero3.getHeroDamage(),}};
-        System.out.println(Arrays.deepToString(createHeroes));
-
-        return hero1; // не могу понять как это сделать.
+        return heroesMassive;
     }
+
+
+
 }
